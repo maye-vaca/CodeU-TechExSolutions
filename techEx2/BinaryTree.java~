@@ -1,0 +1,30 @@
+Public class BinaryTree {
+    private Node<T> root;
+    int size;
+    
+    public BinaryTree(T data) {
+	root = new Node<T>(null);
+	this.size = 0;
+    }
+
+    public void add(T data) {
+	Node<T> curr = this.root;
+	boolean added = false;
+	while (!added) {
+	    if (curr.getLeft() == null) {
+		curr.setLeft(new Node<T>(data));
+		added = true;
+	    } else if (curr.getRight() == null) {
+		curr.setRight(new Node<T>(data));
+		added = true;	
+	    } else {
+		curr = curr.getLeft();
+	    }
+	}
+    }
+
+    public String flatten() {
+	String text = "";
+	boolean atEnd
+    }
+}
