@@ -21,6 +21,8 @@ public class BinaryTree<T extends Comparable<T>> {
 	    Node<T> curr = this.root;
 	    boolean added = false;
 	    while (!added) {
+		//check the left child then the right and place the new node
+		//in the first empty spot. 
 		if (curr.getLeft() == null) {
 		    curr.setLeft(new Node<T>(data));
 		    added = true;
@@ -28,6 +30,8 @@ public class BinaryTree<T extends Comparable<T>> {
 		    curr.setRight(new Node<T>(data));
 		    added = true;	
 		} else {
+		    //if neither spots are empty move down to the left child
+		    //and check for empty spots there
 		    curr = curr.getLeft();
 		}
 	    }
