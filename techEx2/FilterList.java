@@ -61,13 +61,15 @@ public class FilterList {
 	ans = evens(test3);
 	boolean failed = false;
 	int count = 0;
+	//count the number of even numbers in the list
+	//this value will be used later to verify the size of the answer
+	//before going through each element
 	for (Integer i : test3) {
 	    if (i%2 == 0) {
 		count++;
 	    }
 	}
-	//test the size of the answer for consistency before taking the time
-	//to go through all of the items to check if they are even.
+	//test the size of the answer for consistency.
 	if (ans.size() != count) {
 	    System.out.println("TEST FAILED");
 	} else {

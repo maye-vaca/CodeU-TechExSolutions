@@ -1,0 +1,10 @@
+import java.util.Date;
+public class Query {
+    private TimeStamp ts;
+    private String words;
+
+    public Query(){
+	Date date = new Date();
+	this.ts = new Timestamp(date.getTime());
+    }
+}

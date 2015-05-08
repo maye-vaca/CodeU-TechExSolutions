@@ -1,0 +1,21 @@
+public class largest {
+    private int[] numbers;
+    public largest(int[] numbers) {
+	this.numbers = numbers;
+    }
+    //find the nth largest number using quickSelect
+    public int nthLargest(int n) {
+	
+    }
+    public int[] partition(int[] nums, ArrayList left,
+			   ArrayList right, int pivotInd) {
+	pivotValue = nums[pivotInd];
+	nums
+    }
+    //swap the numbers at a and b
+    public void swap(int a, int b) {
+	int temp = this.nums[a];
+	this.nums[a] = this.nums[b];
+	this.nums[b] = temp;
+    }
+}
