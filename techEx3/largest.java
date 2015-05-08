@@ -14,9 +14,10 @@ public class largest {
 	int right = this.nums.length - 1;
 	while (true) {
 	    int length = partition(left, right, rand.nextInt(right));
-	    if (length == n) {
+	    if (length == n && length = left) {
 		return this.nums[n];
 	    }else if (length > n) {
+		//re-establish the bounds for partitioning
 		right = length;
 	    } else {
 		left = length;

@@ -10,9 +10,9 @@ public class Query {
     //gives the next word in the string by splitting the string
     //wherever there is a space
     public String getWord() {
-	String[] splitWords = words.split(" ");
-	this.words = splitWords[1];
-	for (int i = 2; i < splitWords.length; i++) {
+	String[] splitWords = this.words.split(" ");
+	this.words = null;
+	for (int i = 1; i < splitWords.length; i++) {
 	    this.words += splitWords[i];
 	}
 	return splitWords[0];
