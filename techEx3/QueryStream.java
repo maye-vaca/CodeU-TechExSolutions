@@ -2,7 +2,7 @@ import java.util.Iterator;
 public class QueryStream<Query> implements Iterable<Query> {
     private Query[] stream;
     private int size;
-
+    //make a linked list instead of a backing array
     public QueryStream(Query[] q) {
 	this.stream = q;
 	this.size = q.length;
@@ -18,7 +18,7 @@ public class QueryStream<Query> implements Iterable<Query> {
 		return (currInd < size) && (stream[currInd] != null);
 	    }
 	    //gets the next word in the query if there is one
-	    //or the next query
+	    //or the next query if there is no other word
 	    @override
 	    public String next() {
 		if (stream[currIndex] != null) { 
@@ -35,6 +35,7 @@ public class QueryStream<Query> implements Iterable<Query> {
 		    }
 		}
 	    }
+	    //implement remove
     }
     
 }
